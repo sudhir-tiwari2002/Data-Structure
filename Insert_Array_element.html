@@ -4,24 +4,47 @@
     
     <title>Insert Array Element</title>
     <script>
-        let data = [10,12,24,4,54,6,54,6,32,12] // array of elements
-        let new_el = 17    // new elemement which want to insert into the array
-        let position = 2   // postion of the new element into the array
-        console.warn(data)  // console the value of data array
-        for(let i =data.length-1 ; i>= 0 ; i--){
-            if(i >= position) // matching the position of the array where the new element to be inserted
-            {
-                data[i+1]= data[i]  // shifting the data untill the positon met
-                if(i==position)     // checking that position met or not
-                {
-                    data[i]=new_el  // if position met then insert element
+        // let data = [10,12,24,4,54,6,54,6,32,12] // array of elements
+        // let new_el = 17    // new elemement which want to insert into the array
+        // let position = 2   // postion of the new element into the array
+        // console.warn(data)  // console the value of data array
+        // for(let i =data.length-1 ; i>= 0 ; i--){
+        //     if(i >= position) // matching the position of the array where the new element to be inserted
+        //     {
+        //         data[i+1]= data[i]  // shifting the data untill the positon met
+        //         if(i==position)     // checking that position met or not
+        //         {
+        //             data[i]=new_el  // if position met then insert element
+        //         }
+        //     }
+        // }
+        // console.warn(data)    // console the reseult after the element insertion
+
+            // dynamically insert array element at desired position
+        function insertEl(){
+            let data = [10,12,24,4,54,6,54,6,32,12] // Array elemet
+            let new_el =document.getElementById('newElement').value // getting the value from the input feild whose id is newElement
+            new_el = parseInt(new_el)   // changing the type of the input value into integer
+            let postion = document.getElementById('position').value // getting the positon value from the input feild whose id is positon
+
+            console.warn(data);
+
+            for(let i = data.length-1 ;i>0;i--){ // loops throughout the array element into reverse order
+                if(i>=postion){  // checking the the value of i should be greater or equal to insertion postion
+                    data[i+1]=data[i]  // if the positon is less then or equal to i then shift each array element to next position
+                    if(i == postion){  // checking if the i and the position both are same then 
+                        data[i]=new_el  // just place the new element where the position met to the i 
+                    }
                 }
             }
+            console.warn(data)
         }
-        console.warn(data)    // console the reseult after the element insertion
     </script>
 </head>
 <body>
+    <input type="text" placeholder="enter position" id="position">
+    <input type="text" placeholder="enter new element" id="newElement">
+    <button onclick="insertEl()">Insert Element</button>
     
 </body>
 </html>
