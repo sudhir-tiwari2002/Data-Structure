@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Insert Array Element</title>
+    <script>
+        let data = [10,12,24,4,54,6,54,6,32,12] // array of elements
+        let new_el = 17    // new elemement which want to insert into the array
+        let position = 2   // postion of the new element into the array
+        console.warn(data)  // console the value of data array
+        for(let i =data.length-1 ; i>= 0 ; i--){
+            if(i >= position) // matching the position of the array where the new element to be inserted
+            {
+                data[i+1]= data[i]  // shifting the data untill the positon met
+                if(i==position)     // checking that position met or not
+                {
+                    data[i]=new_el  // if position met then insert element
+                }
+            }
+        }
+        console.warn(data)    // console the reseult after the element insertion
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
