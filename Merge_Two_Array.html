@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Merge two array</title>
+    <script>
+        let arr1 =[10,20,30,40,50]   // first array 
+        let arr2 =[2,3,4,43,23,55]  // second array
+        let arr3 =[]                    // third array ,,, this will use for merge array 1 and array 2
+        for(i=0;i<arr1.length;i++)          // looping through first array
+        {
+            arr3[i]=arr1[i]                 // add first array into the third array
+        }
+        for(i=0;i<arr2.length;i++)          // loop through second array
+        {
+            arr3[arr1.length+i] = arr2[i]      // assigning the value of the second array after the first array length into the third array
+        }
+        console.warn(arr3)
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
