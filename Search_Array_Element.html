@@ -4,24 +4,43 @@
     
     <title>Search Array Element</title>
     <script>
-        let arr=[10,20,30,40,50,60]
-        let searchElement = 30        // element which want to search
-        let index=undefined             // initial index 
-        console.warn(arr)
-        for(i=0;i<arr.length;i++)       // traversing throughout array
-        {
-            if(searchElement ===arr[i])     // matching the array element and the search Value
-            {
-                index =i+1                       // if the search element and search value match the assign the index of the array element to index variable and stop the loop
-                break
+        // let arr=[10,20,30,40,50,60]
+        // let searchElement = 30        // element which want to search
+        // let index=undefined             // initial index 
+        // console.warn(arr)
+        // for(i=0;i<arr.length;i++)       // traversing throughout array
+        // {
+        //     if(searchElement ===arr[i])     // matching the array element and the search Value
+        //     {
+        //         index =i+1                       // if the search element and search value match the assign the index of the array element to index variable and stop the loop
+        //         break
+        //     }
+        // }
+        // console.warn(index)
+        // console.warn(arr.indexOf(searchElement)) // inbuilt function for the searching array element
+        // console.warn(arr.splice(2,1)) // delete 1 element from the array of the second position  [fist argument is position and second argument is the total no of element ]
+    
+            //Dynimacally checking that the element present in array or not
+        function searchEl(){
+            let arr=[10,20,30,40,50,60]   
+            console.warn(arr)
+            let searchElement = document.getElementById("searchElement").value
+            searchElement = parseInt(searchElement)
+            let index = undefined
+            for(i=0;i<arr.length;i++){
+                if(searchElement ===arr[i]) 
+                {
+                    index =i+1
+                    break
+                }
+                
             }
+            {console.warn(index?index:'element not found')}  // if element found then log index otherwise log element not found
         }
-        console.warn(index)
-        console.warn(arr.indexOf(searchElement)) // inbuilt function for the searching array element
-        console.warn(arr.splice(2,1)) // delete 1 element from the array of the second position  [fist argument is position and second argument is the total no of element ]
     </script>
 </head>
 <body>
-    
+    <input type="text" id="searchElement" placeholder="enter the elemement">
+    <button onclick="searchEl()">search Element</button>
 </body>
 </html>
