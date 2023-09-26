@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Delete Array Element</title>
+    <script>
+        let arr = [10,20,21,34,32,5,33,56,3]  // arrray
+        console.log(arr)
+        let postion = 3    // position of that array which want to delete
+
+        if(postion>=0 && postion < arr.length)  // checking the condition that the position should be greater or equal to zero and it also should be less the the total length of the array
+        {
+            for(i=postion;i<arr.length-1;i++){  // start looping from the position of the element which want to delete and shift all the next element toward its previous
+            
+                arr[i]=arr[i+1]    
+            }
+        }
+        
+        
+        arr.length = arr.length-1    // decrease the length of the array by 1 , other wise it will return undefined or any garbage value
+        console.warn(arr)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
