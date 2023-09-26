@@ -4,25 +4,49 @@
     
     <title>Delete Array Element</title>
     <script>
-        let arr = [10,20,21,34,32,5,33,56,3]  // arrray
-        console.log(arr)
-        let postion = 3    // position of that array which want to delete
+        // let arr = [10,20,21,34,32,5,33,56,3]  // arrray
+        // document.write("Original array : ",arr)
+        // console.log(arr)
+        // let postion = 3    // position of that array which want to delete
 
-        if(postion>=0 && postion < arr.length)  // checking the condition that the position should be greater or equal to zero and it also should be less the the total length of the array
-        {
-            for(i=postion;i<arr.length-1;i++){  // start looping from the position of the element which want to delete and shift all the next element toward its previous
+        // if(postion>=0 && postion < arr.length)  // checking the condition that the position should be greater or equal to zero and it also should be less the the total length of the array
+        // {
+        //     for(i=postion;i<arr.length-1;i++){  // start looping from the position of the element which want to delete and shift all the next element toward its previous
             
-                arr[i]=arr[i+1]    
+        //         arr[i]=arr[i+1]    
+        //     }
+        // }
+        
+        
+        // arr.length = arr.length-1    // decrease the length of the array by 1 , other wise it will return undefined or any garbage value
+        // console.warn(arr)
+        
+
+
+        // Dynamically deleting element from any position
+        function deleteEl(){
+            let arr = [10,20,21,34,32,5,33,56,3] // this is the original array
+            
+            console.warn(arr)   // logging the array value into the console box
+            let position = document.getElementById("position").value    // getting the position value from the input feild
+            position=parseInt(position)     //converting postion value data type into the integer
+            if(position>=0 && position < arr.length)   // checking the condition that position should be greater then or equal to zero and less the total length of the array
+            {
+                for(i=position;i<arr.length-1;i++)  // looping throughout the array from the giving position
+                {
+                    arr[i]=arr[i+1]      // shifting array element to its previous position
+                }
             }
+            arr.length = arr.length-1    // removing last position 
+            console.warn(arr)
         }
-        
-        
-        arr.length = arr.length-1    // decrease the length of the array by 1 , other wise it will return undefined or any garbage value
-        console.warn(arr)
+
 
     </script>
 </head>
 <body>
     
+    <input type="text" id="position" placeholder="position of deleting array">
+    <button onclick="deleteEl()">Delete Element</button>
 </body>
 </html>
