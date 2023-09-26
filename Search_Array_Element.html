@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Search Array Element</title>
+    <script>
+        let arr=[10,20,30,40,50,60]
+        let searchElement = 30        // element which want to search
+        let index=undefined             // initial index 
+        console.warn(arr)
+        for(i=0;i<arr.length;i++)       // traversing throughout array
+        {
+            if(searchElement ===arr[i])     // matching the array element and the search Value
+            {
+                index =i+1                       // if the search element and search value match the assign the index of the array element to index variable and stop the loop
+                break
+            }
+        }
+        console.warn(index)
+        console.warn(arr.indexOf(searchElement)) // inbuilt function for the searching array element
+        console.warn(arr.splice(2,1)) // delete 1 element from the array of the second position  [fist argument is position and second argument is the total no of element ]
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
