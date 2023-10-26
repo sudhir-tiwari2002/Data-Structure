@@ -1,0 +1,26 @@
+
+
+Algorithm :  steps to perform any operation (Step by step solution of any problem)
+
+suppose i need to search any element from the array.
+  so i have to follow some steps to solve this steps 
+
+  fiststep   :   define array
+  second step :   define the element which want to search
+  third step   :   traverse throgh the defined array
+  fourth :          match elemement by every array elemement
+  fifth  :         if elemement match then return the reseult
+  sixth:           if element not match then what should be the reseult
+  eight :          return result
+
+Algorithm depends on two factor
+1: time complexity 
+2: space complexity
+
+Time complexity   :   time complexity is mainly calculated by counting the number of steps to finish the 
+execution
+
+Space complexity   :   space complexity is he amount of space requird to solve a problem
+space complexity = auxillary space + input size
+
+Big O (O'h) notation :   use to denote the complexity (both)
